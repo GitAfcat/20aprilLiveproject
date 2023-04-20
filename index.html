@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee Directory</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>Employee Directory</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Employee ID</th>
+				<th>Name</th>
+				<th>Department</th>
+				<th>Phone</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody id="employee-list">
+			<!-- Employees will be added dynamically here -->
+		</tbody>
+	</table>
+
+	<form>
+		<fieldset>
+			<legend>Add Employee</legend>
+			<label for="employee-id">Employee ID:</label>
+			<input type="text" id="employee-id" name="employee-id" required>
+			<label for="employee-name">Name:</label>
+			<input type="text" id="employee-name" name="employee-name" required>
+			<label for="employee-dept">Department:</label>
+			<input type="text" id="employee-dept" name="employee-dept" required>
+			<label for="employee-phone">Phone:</label>
+			<input type="tel" id="employee-phone" name="employee-phone" required>
+			<label for="employee-email">Email:</label>
+			<input type="email" id="employee-email" name="employee-email" required>
+			<button type="submit" id="add-employee-btn">Add Employee</button>
+		</fieldset>
+	</form>
+
+	<script src="script.js"></script>
+</body>
+</html>
