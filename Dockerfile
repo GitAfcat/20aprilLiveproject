@@ -3,9 +3,10 @@ FROM ubuntu
 RUN apt-get update && \
     apt-get install -y apache2
 
-COPY . /var/www/html/
+COPY mywebsite /var/www/html/
 
 EXPOSE 8000
 
-CMD ["apachectl", "-D", "FOREGROUND"]
+RUN sudo service apache2 start
 
+CMD ["/bin/bash", "-c", "systemctl start apache2 && apachectl -DFOREGROUND"]
