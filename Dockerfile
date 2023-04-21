@@ -1,10 +1,4 @@
-FROM ubuntu
+FROM httpd:2.4
+COPY index.html /usr/local/apache2/htdocs/
+EXPOSE 80
 
-RUN apt-get update && \
-    apt-get install -y apache2
-
-COPY index.html /var/www/html/
-
-EXPOSE 8000
-
-CMD ["/bin/bash", "-c", "systemctl start apache2 && apachectl -DFOREGROUND"]
